@@ -38,7 +38,7 @@ namespace QuantConnect.Securities
             var quoteCash = security.QuoteCurrency;
 
             //Get the required information from the vehicle this order will affect
-            var isLong = security.Holdings.IsLong;
+            var isLong = security.Holdings.IsLong; 
             var isShort = security.Holdings.IsShort;
             var closedPosition = false;
             //Make local decimals to avoid any rounding errors from int multiplication

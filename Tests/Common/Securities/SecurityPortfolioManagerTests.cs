@@ -1250,7 +1250,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, 1);
             securities[Symbols.SPY].SetMarketPrice(new Tick { Value = 200 });
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1318,7 +1318,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, 100);
             securities[Symbols.SPY].SetMarketPrice(new Tick { Value = 20 });
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 100, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -100, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1383,7 +1383,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY_P_192_Feb19_2016].Holdings.SetHoldings(1, 100);
             securities[Symbols.SPY].SetMarketPrice(new Tick { Value = 2000 });
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, 100, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, -100, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_P_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1448,7 +1448,7 @@ namespace QuantConnect.Tests.Common.Securities
             );
             securities[Symbols.SPY_P_192_Feb19_2016].Holdings.SetHoldings(1, 1);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_P_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1518,7 +1518,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, 2);
             securities[Symbols.SPY].SetMarketPrice(new Tick { Value = 200 });
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1585,7 +1585,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, -1);
             securities[Symbols.SPY].SetMarketPrice(new Tick { Value = 200 });
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1659,7 +1659,7 @@ namespace QuantConnect.Tests.Common.Securities
             );
             securities[Symbols.SPY_P_192_Feb19_2016].Holdings.SetHoldings(1, -1);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_P_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1730,7 +1730,7 @@ namespace QuantConnect.Tests.Common.Securities
             );
             securities[Symbols.SPY_P_192_Feb19_2016].Holdings.SetHoldings(1, -2);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_P_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1802,7 +1802,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY].SetMarketPrice(new TradeBar { Time = securities.UtcTime, Symbol = Symbols.SPY, Close = 195 });
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, 1);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1868,7 +1868,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY].SetMarketPrice(new TradeBar { Time = securities.UtcTime, Symbol = Symbols.SPY, Close = 190 });
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, 100);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 100, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -100, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -1933,7 +1933,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY].SetMarketPrice(new TradeBar { Time = securities.UtcTime, Symbol = Symbols.SPY, Close = 189 });
             securities[Symbols.SPY_P_192_Feb19_2016].Holdings.SetHoldings(1, 1);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_P_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -2124,7 +2124,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY].SetMarketPrice(new TradeBar { Time = securities.UtcTime, Symbol = Symbols.SPY, Close = 195 });
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, 2);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -2191,7 +2191,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY].SetMarketPrice(new TradeBar { Time = securities.UtcTime, Symbol = Symbols.SPY, Close = 195 });
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, -1);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -2260,7 +2260,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY].SetMarketPrice(new TradeBar { Time = securities.UtcTime, Symbol = Symbols.SPY, Close = 10 });
             securities[Symbols.SPY_C_192_Feb19_2016].Holdings.SetHoldings(1, -100);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, -100, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_C_192_Feb19_2016, 100, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_C_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -2331,7 +2331,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY].SetMarketPrice(new TradeBar { Time = securities.UtcTime, Symbol = Symbols.SPY, Close = 189 });
             securities[Symbols.SPY_P_192_Feb19_2016].Holdings.SetHoldings(1, -1);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_P_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
@@ -2402,7 +2402,7 @@ namespace QuantConnect.Tests.Common.Securities
             securities[Symbols.SPY].SetMarketPrice(new TradeBar { Time = securities.UtcTime, Symbol = Symbols.SPY, Close = 189 });
             securities[Symbols.SPY_P_192_Feb19_2016].Holdings.SetHoldings(1, -2);
 
-            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, -1, 0, 0, securities.UtcTime, ""));
+            transactions.AddOrder(new SubmitOrderRequest(OrderType.OptionExercise, SecurityType.Option, Symbols.SPY_P_192_Feb19_2016, 1, 0, 0, securities.UtcTime, ""));
             var option = (Option)securities[Symbols.SPY_P_192_Feb19_2016];
             var order = (OptionExerciseOrder)transactions.GetOrders(x => true).First();
             option.Underlying = securities[Symbols.SPY];
