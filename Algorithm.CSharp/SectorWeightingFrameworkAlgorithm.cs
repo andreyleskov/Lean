@@ -46,7 +46,7 @@ namespace QuantConnect.Algorithm.CSharp
 
             SetUniverseSelection(new FineFundamentalUniverseSelectionModel(SelectCoarse, SelectFine));
             SetAlpha(new ConstantAlphaModel(InsightType.Price, InsightDirection.Up, QuantConnect.Time.OneDay));
-            SetPortfolioConstruction(new SectorWeightingPortfolioConstructionModel());
+            //SetPortfolioConstruction(new SectorWeightingPortfolioConstructionModel());
 
             Func<string, Symbol> toSymbol = t => QuantConnect.Symbol.Create(t, SecurityType.Equity, Market.USA);
             _targets.Add(toSymbol("AAPL"), .25m);

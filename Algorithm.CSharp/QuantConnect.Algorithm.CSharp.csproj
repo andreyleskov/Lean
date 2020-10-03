@@ -390,6 +390,7 @@
     <Compile Include="Benchmarks\CoarseFineUniverseSelectionBenchmark.cs" />
     <Compile Include="Benchmarks\IndicatorRibbonBenchmark.cs" />
     <Compile Include="ZeroFeeRegressionAlgorithm.cs" />
+    <Compile Include="Custom\MyAlgorithm.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Algorithm.Framework\QuantConnect.Algorithm.Framework.csproj">
@@ -432,6 +433,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DaylightSavingTimeHistoryRegressionTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Custom\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

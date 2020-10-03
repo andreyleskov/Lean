@@ -9,7 +9,7 @@
   "environment": "backtesting", // "live-paper", "backtesting", "live-interactive", "live-interactive-iqfeed"
 
   // algorithm class selector
-  "algorithm-type-name": "BasicTemplateFrameworkAlgorithm",
+  "algorithm-type-name": "MyAlgorithm",
 
   // Algorithm language selector - options CSharp, FSharp, VisualBasic, Python, Java
   "algorithm-language": "CSharp",
@@ -100,7 +100,7 @@
   "fxcm-account-id": "",
 
   // iqfeed configuration
-  "iqfeed-host": "127.0.0.1", 
+  "iqfeed-host": "127.0.0.1",
   "iqfeed-username": "",
   "iqfeed-password": "",
   "iqfeed-productName": "",
